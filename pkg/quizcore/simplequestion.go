@@ -13,7 +13,12 @@ func (q *Simplequestion) Question() string {
 
 // Answer to the question
 func (q *Simplequestion) Answer() string {
-	return q.question
+	return q.answer
+}
+
+// CheckAnswer returns true if answer is correct, false otherwise
+func (q *Simplequestion) CheckAnswer(answer string) bool {
+	return q.Answer() == answer
 }
 
 // NewSimpleQuestion creates a new simple question

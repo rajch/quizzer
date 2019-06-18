@@ -17,4 +17,9 @@ func TestSimpleQuestion(t *testing.T) {
 		t.Fail()
 	}
 
+	if q.CheckAnswer(answer) != true || q.CheckAnswer("wrong") == true {
+		t.Log("CheckAnswer not working properly.")
+		t.Fail()
+	}
+
 }
