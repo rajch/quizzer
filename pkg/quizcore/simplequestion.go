@@ -7,17 +7,17 @@ type Simplequestion struct {
 }
 
 // Question to be asked
-func (q *Simplequestion) Question() string {
+func (q Simplequestion) Question() string {
 	return q.question
 }
 
 // Answer to the question
-func (q *Simplequestion) Answer() string {
+func (q Simplequestion) Answer() string {
 	return q.answer
 }
 
 // CheckAnswer returns true if answer is correct, false otherwise
-func (q *Simplequestion) CheckAnswer(answer string) bool {
+func (q Simplequestion) CheckAnswer(answer string) bool {
 	return q.Answer() == answer
 }
 
